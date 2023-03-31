@@ -11,11 +11,11 @@ session = Session()
 Base.metadata.create_all(engine)
 
 
-DEAD = Jogos(
+dead = Jogos(
     name="Dead Space Remake",
-    plataforma="Spongebob Squarepants",
-    preco="Spongebob Squarepants",
-    quantidade="Spongebob Squarepants",
+    plataforma="PS5",
+    preco="350",
+    quantidade="10",
      )
 Forspoken = Jogos(
     name="Forspoken",
@@ -54,6 +54,7 @@ zelda = Jogos(
     preco="350",
     quantidade="10",
      )
-session.add_all([])
+session.add_all([dead, Forspoken, Deadisland, Hogwarts, wild, re, zelda])
 
 session.commit()
+
